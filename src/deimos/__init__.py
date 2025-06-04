@@ -25,8 +25,9 @@ SY = np.array([
 ])
 
 def main():
-    if len(sys.argv[1]) != 1:
+    if len(sys.argv) != 2:
         print('error: incorrect arguments')
+        exit(1)
 
     binary = detect_edges(sys.argv[1])
     regions = analyze_regions(binary)
