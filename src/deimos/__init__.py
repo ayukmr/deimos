@@ -53,7 +53,7 @@ def detect_edges(path):
     pil = Image.open(path).convert('L')
     img = np.array(pil).astype(float)
 
-    padded = np.pad(img, 1)
+    padded = np.pad(img, 1, mode='edge')
     grad = np.zeros_like(img)
 
     rows, cols = img.shape
